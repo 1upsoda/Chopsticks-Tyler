@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tennis2"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ImageButton
+        android:id="@+id/playerRightHand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="46dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/right1" />
+
+    <ImageButton
+        android:id="@+id/enemyRightHand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/playerRightHand"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="46dp"
+        android:background="@drawable/right1" />
+
+    <ImageButton
+        android:id="@+id/playerLeftHand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/playerRightHand"
+        android:layout_marginLeft="33dp"
+        android:background="@drawable/left1" />
+
+    <ImageButton
+        android:id="@+id/enemyLeftHand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/playerLeftHand"
+        android:layout_alignTop="@+id/enemyRightHand"
+        android:background="@drawable/left1" />
+
+    <TextView
+        android:id="@+id/playerRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/playerRightHand"
+        android:layout_alignRight="@+id/playerRightHand"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/playerLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/playerRight"
+        android:layout_alignLeft="@+id/playerLeftHand"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/enemyRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/enemyLeftHand"
+        android:layout_alignLeft="@+id/playerRight"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/enemyLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/enemyRight"
+        android:layout_alignLeft="@+id/enemyLeftHand"
+        android:text="1" />
+
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/resetButton"
+        android:layout_alignBottom="@+id/resetButton"
+        android:layout_alignLeft="@+id/playerLeft"
+        android:background="@color/yygfjsd"
+        android:text="Home" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/playerRight"
+        android:background="@color/yygfjsd"
+        android:text="Reset" />
+
+</RelativeLayout>
